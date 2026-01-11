@@ -11,4 +11,5 @@
          radians per second [rad/s] for revolute joints,
 
 5. setup mass 
-5. body color set
+     >> unit (kg)
+6. body color set
