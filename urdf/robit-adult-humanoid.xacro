@@ -318,8 +318,8 @@
   <child link="left_hip_1"/>
   <axis xyz="0.0 1.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-2.225"
+      upper="2.225"
       effort="120.0"
       velocity="15.0" />
 </joint>
@@ -331,8 +331,8 @@
   <child link="left_hip_thigh_1"/>
   <axis xyz="1.0 0.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-0.493"
+      upper="2.3"
       effort="60"
       velocity="50" />
 </joint>
@@ -344,8 +344,8 @@
   <child link="left_shin_1"/>
   <axis xyz="0.0 1.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-1.783"
+      upper="2.53"
       effort="120.0"
       velocity="15.0" />
 </joint>
@@ -357,8 +357,8 @@
   <child link="right_hip_1"/>
   <axis xyz="0.0 -1.0 -0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-2.225"
+      upper="2.225"
       effort="120.0"
       velocity="15.0" />
 </joint>
@@ -370,8 +370,8 @@
   <child link="right_hip_thigh_1"/>
   <axis xyz="1.0 -0.0 -0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-2.3"
+      upper="0.493"
       effort="60"
       velocity="50" />
 </joint>
@@ -383,8 +383,8 @@
   <child link="left_thigh_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-3.142"
+      upper="3.142"
       effort="60"
       velocity="50" />
 </joint>
@@ -396,8 +396,8 @@
   <child link="right_thigh_1"/>
   <axis xyz="-0.0 -0.0 -1.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-3.142"
+      upper="3.142"
       effort="60"
       velocity="50" />
 </joint>
@@ -409,8 +409,8 @@
   <child link="right_shin_1"/>
   <axis xyz="-0.0 -1.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-2.53"
+      upper="1.783"
       effort="120.0"
       velocity="15.0" />
 </joint>
@@ -422,8 +422,8 @@
   <child link="left_ankle_1"/>
   <axis xyz="-0.0 1.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-1.5"
+      upper="1.5"
       effort="36"
       velocity="67.0" />
 </joint>
@@ -435,8 +435,8 @@
   <child link="right_ankle_1"/>
   <axis xyz="0.0 -1.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-1.5"
+      upper="1.5"
       effort="36"
       velocity="67.0" />
 </joint>
@@ -448,8 +448,8 @@
   <child link="right_foot_1"/>
   <axis xyz="1.0 -0.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-1.57"
+      upper="1.57"
       effort="36"
       velocity="67.0" />
 </joint>
@@ -461,8 +461,8 @@
   <child link="left_foot_1"/>
   <axis xyz="1.0 -0.0 0.0"/>
   <limit
-      lower="0"
-      upper="2.34"
+      lower="-1.57"
+      upper="1.57"
       effort="36"
       velocity="67.0" />
 </joint>
