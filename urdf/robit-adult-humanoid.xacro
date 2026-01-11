@@ -1,0 +1,392 @@
+<?xml version="1.0" ?>
+<robot name="robit-adult-humanoid" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robit-adult-humanoid_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robit-adult-humanoid_description)/urdf/robit-adult-humanoid.trans" />
+<xacro:include filename="$(find robit-adult-humanoid_description)/urdf/robit-adult-humanoid.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.01281095989310514 -0.0022810841892335573 -0.04582677292819565" rpy="0 0 0"/>
+    <mass value="13.241738959818246"/>
+    <inertia ixx="0.05322" iyy="0.046518" izz="0.033952" ixy="0.0" iyz="-3.4e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="torso_dummy_1">
+  <inertial>
+    <origin xyz="4.010597370179836e-08 2.07269816436019e-08 0.20991445985992171" rpy="0 0 0"/>
+    <mass value="162.68508194775083"/>
+    <inertia ixx="4.348138" iyy="2.401024" izz="2.407002" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.012811 0.00231 -0.061621" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/torso_dummy_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.012811 0.00231 -0.061621" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/torso_dummy_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_hip_1">
+  <inertial>
+    <origin xyz="0.0006297032466040884 0.06724050201455194 -0.00012501074286021263" rpy="0 0 0"/>
+    <mass value="4.7954352907466955"/>
+    <inertia ixx="0.009165" iyy="0.00579" izz="0.007928" ixy="-3.4e-05" iyz="-1.3e-05" ixz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.012811 -0.05519 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.012811 -0.05519 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_hip_thigh_1">
+  <inertial>
+    <origin xyz="-0.03294977172684366 2.0727097427286623e-08 -0.05754189872842047" rpy="0 0 0"/>
+    <mass value="1.2540419749856078"/>
+    <inertia ixx="0.00238" iyy="0.004152" izz="0.002362" ixy="-0.0" iyz="0.0" ixz="-9.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022439 -0.13519 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_hip_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022439 -0.13519 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_hip_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_shin_1">
+  <inertial>
+    <origin xyz="0.010618528090019137 -0.0333920984187136 -0.14926516145705215" rpy="0 0 0"/>
+    <mass value="5.787046721940419"/>
+    <inertia ixx="0.03492" iyy="0.034511" izz="0.005734" ixy="-6.6e-05" iyz="-0.00021" ixz="-0.000323"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.031811 -0.16719 0.366379" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_shin_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.031811 -0.16719 0.366379" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_shin_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_hip_1">
+  <inertial>
+    <origin xyz="0.0006297032483585027 -0.0672404879580738 -0.0001250108063819838" rpy="0 0 0"/>
+    <mass value="4.795435290722294"/>
+    <inertia ixx="0.009165" iyy="0.00579" izz="0.007928" ixy="3.4e-05" iyz="1.3e-05" ixz="7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.012811 0.05981 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.012811 0.05981 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_hip_thigh_1">
+  <inertial>
+    <origin xyz="-0.032949771725187454 2.0726992372432917e-08 -0.0575418987136713" rpy="0 0 0"/>
+    <mass value="1.2540419749867722"/>
+    <inertia ixx="0.00238" iyy="0.004152" izz="0.002362" ixy="0.0" iyz="-0.0" ixz="-9.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.022439 0.13981 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_hip_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.022439 0.13981 0.068879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_hip_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_thigh_1">
+  <inertial>
+    <origin xyz="-0.01047227388465445 0.0010136953040755792 -0.12292464330555514" rpy="0 0 0"/>
+    <mass value="10.074283584151052"/>
+    <inertia ixx="0.066064" iyy="0.069816" izz="0.014807" ixy="9e-05" iyz="0.000661" ixz="-0.006958"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.011811 -0.13519 0.178879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.011811 -0.13519 0.178879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_thigh_1">
+  <inertial>
+    <origin xyz="-0.010472273856055954 -0.0010136538122056948 -0.12292464329228153" rpy="0 0 0"/>
+    <mass value="10.074283584900902"/>
+    <inertia ixx="0.066064" iyy="0.069816" izz="0.014807" ixy="-9e-05" iyz="-0.000661" ixz="-0.006958"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.011811 0.13981 0.178879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.011811 0.13981 0.178879" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_shin_1">
+  <inertial>
+    <origin xyz="0.010618528091643188 0.033392135688315616 -0.1492651614422552" rpy="0 0 0"/>
+    <mass value="5.78704672194055"/>
+    <inertia ixx="0.03492" iyy="0.034511" izz="0.005734" ixy="6.6e-05" iyz="0.00021" ixz="-0.000323"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.031811 0.17181 0.366379" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_shin_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.031811 0.17181 0.366379" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_shin_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_ankle_1">
+  <inertial>
+    <origin xyz="3.640125762864599e-07 -0.019499640616245678 -3.179999508162723e-07" rpy="0 0 0"/>
+    <mass value="0.06598347385516057"/>
+    <inertia ixx="1.1e-05" iyy="6e-06" izz="1e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014295 -0.157813 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014295 -0.157813 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_ankle_1">
+  <inertial>
+    <origin xyz="3.640142449499312e-07 0.019499682070422297 -3.179851766343944e-07" rpy="0 0 0"/>
+    <mass value="0.0659834738551606"/>
+    <inertia ixx="1.1e-05" iyy="6e-06" izz="1e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014295 0.162433 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014295 0.162433 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_ankle_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_foot_1">
+  <inertial>
+    <origin xyz="0.0002537656221860748 -3.1792990121126685e-07 -0.046881970453633515" rpy="0 0 0"/>
+    <mass value="1.9765556077954949"/>
+    <inertia ixx="0.001684" iyy="0.003666" izz="0.005031" ixy="0.0" iyz="0.0" ixz="5.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.002295 0.142933 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.002295 0.142933 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/right_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_foot_1">
+  <inertial>
+    <origin xyz="0.005253765620523281 3.5938407663693717e-07 -0.046881970468406475" rpy="0 0 0"/>
+    <mass value="1.9765556077954982"/>
+    <inertia ixx="0.001684" iyy="0.003666" izz="0.005031" ixy="-0.0" iyz="-0.0" ixz="5.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.007295 -0.138313 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.007295 -0.138313 0.666534" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robit-adult-humanoid_description)/meshes/left_foot_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="torso_yaw" type="continuous">
+  <origin xyz="-0.012811 -0.00231 0.061621" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="torso_dummy_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="left_hip_pitch" type="continuous">
+  <origin xyz="-0.012811 0.05519 -0.068879" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_hip_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_hip_roll" type="continuous">
+  <origin xyz="0.03525 0.08 0.0" rpy="0 0 0"/>
+  <parent link="left_hip_1"/>
+  <child link="left_hip_thigh_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="left_knee_pitch" type="continuous">
+  <origin xyz="-0.02 0.032 -0.1875" rpy="0 0 0"/>
+  <parent link="left_thigh_1"/>
+  <child link="left_shin_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_hip_pitch" type="continuous">
+  <origin xyz="-0.012811 -0.05981 -0.068879" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_hip_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="right_hip_roll" type="continuous">
+  <origin xyz="0.03525 -0.08 0.0" rpy="0 0 0"/>
+  <parent link="right_hip_1"/>
+  <child link="right_hip_thigh_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="left_hip_yaw" type="continuous">
+  <origin xyz="-0.03425 0.0 -0.11" rpy="0 0 0"/>
+  <parent link="left_hip_thigh_1"/>
+  <child link="left_thigh_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="right_hip_yaw" type="continuous">
+  <origin xyz="-0.03425 0.0 -0.11" rpy="0 0 0"/>
+  <parent link="right_hip_thigh_1"/>
+  <child link="right_thigh_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="right_knee_pitch" type="continuous">
+  <origin xyz="-0.02 -0.032 -0.1875" rpy="0 0 0"/>
+  <parent link="right_thigh_1"/>
+  <child link="right_shin_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="left_ankle_pitch" type="continuous">
+  <origin xyz="0.017516 -0.009377 -0.300155" rpy="0 0 0"/>
+  <parent link="left_shin_1"/>
+  <child link="left_ankle_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_ankle_pitch" type="continuous">
+  <origin xyz="0.017516 0.009377 -0.300155" rpy="0 0 0"/>
+  <parent link="right_shin_1"/>
+  <child link="right_ankle_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="right_ankle_roll" type="continuous">
+  <origin xyz="0.012 0.0195 0.0" rpy="0 0 0"/>
+  <parent link="right_ankle_1"/>
+  <child link="right_foot_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="left_ankle_roll" type="continuous">
+  <origin xyz="0.007 -0.0195 0.0" rpy="0 0 0"/>
+  <parent link="left_ankle_1"/>
+  <child link="left_foot_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+</robot>
